@@ -51,14 +51,14 @@ int
 main (int argc, char *argv[])
 {
 
-  uint32_t numberOfNodes = 50;
+  uint32_t numberOfNodes = 16;
 
-  if(argc > 1)
+  /*if(argc > 1)
   {
      numberOfNodes = atoi(argv[1]);
      //cout<<"Numero: "<<atoi(argv[1])<<"\n";
      //cout<<"Primeiro parametro: "<<argv[0]<<"\n";
-  }
+  }*/
 
   // disable fragmentation
   Config::SetDefault ("ns3::WifiRemoteStationManager::FragmentationThreshold", StringValue ("2200"));
@@ -104,8 +104,8 @@ main (int argc, char *argv[])
 
 
   Ptr<UniformRandomVariable> randomizer = CreateObject<UniformRandomVariable> ();
-  randomizer->SetAttribute ("Min", DoubleValue (10));
-  randomizer->SetAttribute ("Max", DoubleValue (200));
+  randomizer->SetAttribute ("Min", DoubleValue (83));
+  randomizer->SetAttribute ("Max", DoubleValue (483));
 
   MobilityHelper mobility;
   mobility.SetPositionAllocator ("ns3::RandomBoxPositionAllocator",
@@ -204,7 +204,7 @@ main (int argc, char *argv[])
 
   // Tracers
 
-  std::string cstracer("resultados/ndn-with-cache-no-mob-pollution/experimento_");
+  /*std::string cstracer("resultados/ndn-with-cache-no-mob-pollution/experimento_");
   cstracer = cstracer.append(argv[2]);
   cstracer = cstracer.append("/rodada_");
   cstracer = cstracer.append(argv[3]);
@@ -238,7 +238,7 @@ main (int argc, char *argv[])
   l3rate = l3rate.append("/rodada_");
   l3rate = l3rate.append(argv[3]);
   l3rate = l3rate.append("/trace-rate.txt");
-  ndn::L3RateTracer::InstallAll (l3rate, Seconds (1.0));
+  ndn::L3RateTracer::InstallAll (l3rate, Seconds (1.0));*/
 
   Simulator::Run ();
   Simulator::Destroy ();
