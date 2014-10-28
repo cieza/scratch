@@ -51,7 +51,7 @@ int
 main (int argc, char *argv[])
 {
 
-  uint32_t numberOfNodes = 16;
+  uint32_t numberOfNodes = 50;
 
   /*if(argc > 1)
   {
@@ -159,10 +159,10 @@ main (int argc, char *argv[])
   consumerHelper.SetPrefix (prefix);
   consumerHelper.SetAttribute ("Frequency", DoubleValue (10.0));
   consumerHelper.Install (nodes.Get (2));
-  /*consumerHelper.Install (nodes.Get (3));
+  consumerHelper.Install (nodes.Get (3));
   consumerHelper.Install (nodes.Get (6));
   consumerHelper.Install (nodes.Get (9));
-  consumerHelper.Install (nodes.Get (12));*/
+  consumerHelper.Install (nodes.Get (12));
 
 
   // Producer will reply to all requests starting with /prefix

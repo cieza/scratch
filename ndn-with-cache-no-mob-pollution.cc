@@ -51,7 +51,7 @@ int
 main (int argc, char *argv[])
 {
 
-  uint32_t numberOfNodes = 16;
+  uint32_t numberOfNodes = 50			;
 
   /*if(argc > 1)
   {
