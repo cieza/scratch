@@ -89,6 +89,6 @@ $valor_teste = $y/9000;
 # Y/B: 
 
 
-print("X/A: $valor_1     Y/A: $valor_2      X/B: $valor_3      Y/B: $valor_4      TESTE: $valor_teste\n");
+print("X/A: $valor_1     Y/A: $valor_2      X/B: $valor_3      Y/B: $valor_4      TESTE: $valor_teste     atendidos: $sum_packet_raw     media: $y\n");
 
 
