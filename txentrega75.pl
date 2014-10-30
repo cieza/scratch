@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-$diretorio = "/Users/Elise/Desktop/resultados75/ndn-no-cache-no-mob/experimento_1";
+$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_1";
 #$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_1";
 #$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_1";
 #$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_1";
