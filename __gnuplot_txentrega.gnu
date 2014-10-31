@@ -7,7 +7,6 @@ set output "txentrega.png"
 
 # Select histogram data
 set style data histogram
-set style histogram errorbars gap 2 lw 1
 
 set grid ytics
 #set key left top reverse Left
@@ -20,9 +19,11 @@ set style fill pattern border
 
 set style histogram clustered
 #set style histogram errorbars linewidth 0.1
+#set style histogram errorbars gap 2 lw 1
+#set style histogram errorbars gap 2 lt -1 lw 2
+#set style histogram errorbars
 #set bars front
 
-plot 'txentrega.tsv' with errorbars
 #plot for [COL=2:5] 'txentrega.tsv' using COL:xticlabels(1) title columnheader
 plot 'txentrega' using 2:xtic(1) title "no-cache-no-mob" fill pattern 5, \
 '' using 3 title "no-cache-no-mob-pollution" fill pattern 2, \
