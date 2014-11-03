@@ -21,10 +21,10 @@ opendir(diretorio, $diretorio);
 closedir(diretorio);
 
 
-$sum_packets = 0;
+#$sum_packets = 0;
 $sum_packet_raw = 0;
-$sum_out_packets = 0;
-$sum_out_packet_raw = 0;
+#$sum_out_packets = 0;
+$sum_satisfied_packet_raw = 0;
 $count = 0;
 
 foreach $dir_exp(@lista)
@@ -51,13 +51,13 @@ foreach $dir_exp(@lista)
                 {
                     #print("Entrou\n");
                     #$packets = $packets + $linha[5];
-                    $ininterest_packet_raw = $packet_raw + $linha[7];
+                    $ininterest_packet_raw = $ininterest_packet_raw + $linha[7];
                 }
                 if($linha[4] eq "InSatisfiedInterests")
                 {
                     #print("Entrou\n");
                     #$out_packets = $out_packets + $linha[5];
-                    $insatisfiedinterest_packet_raw = $out_packet_raw + $linha[7];
+                    $insatisfiedinterest_packet_raw = $insatisfiedinterest_packet_raw + $linha[7];
                 }
             }
 
