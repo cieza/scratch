@@ -88,6 +88,6 @@ $taxa_entrega = $media_satisfeitos/$media_enviados;
 # taxa_entrega: taxa de entrega calculada pela razão entre os interesses enviados e os interesses atendidos
 
 
-print("$taxa_entrega\n");
+print("Media_satisfeitos: $media_satisfeitos         Media_enviados: $media_enviados         Taxa_de_entrega: $taxa_entrega\n");
 
 
