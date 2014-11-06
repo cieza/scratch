@@ -1,17 +1,9 @@
 #!/usr/bin/perl
 
-$diretorio = "/Users/Elise/Desktop/graficos/resultados";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_1";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_1";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_1";
+#$diretorio = "/Users/Elise/Desktop/graficos/resultados";
 
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_2";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_2";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_2";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_2";
+$diretorio = "/home/elise/ndnSIM/ns-3/resultados";
 
-
-# $arquivo_final= "/home/elise/ndnSIM/ns-3/resultados/arquivo-final-entrega";
 
 $n = $ARGV[0];
 
@@ -33,7 +25,7 @@ $k = 1;
 foreach $dir_scenario(@lista)
 {
     
-print("Pasta: $dir_scenario\n");
+    print("Pasta: $dir_scenario\n");
 
     if($dir_scenario ne "." and $dir_scenario ne ".." and $dir_scenario ne ".git")
     {
@@ -123,8 +115,8 @@ print("Pasta: $dir_scenario\n");
     
 }
 
-
-$file_name = "/Users/Elise/Desktop/graficos/txentrega.txt";
+$file_name = "/home/elise/ndnSIM/ns-3/txentrega.txt";
+#$file_name = "/Users/Elise/Desktop/graficos/txentrega.txt";
 open ARK, ">".$file_name;
 select ARK;
 $i = 0;
@@ -141,7 +133,6 @@ while($i < 3)
     $i = $i + 1;
 }
 
-print("AQUII 140!!!!!!!!! \n");
 close ARK;
 #medias
 #$x =  $sum_packets/$count;
