@@ -134,7 +134,7 @@ main (int argc, char *argv[])
   NS_LOG_INFO ("Installing NDN stack");
   ndn::StackHelper ndnHelper;
   ndnHelper.SetForwardingStrategy ("ns3::ndn::fw::BestRoute");
-  ndnHelper.SetContentStore ("ns3::ndn::cs::Lru", "MaxSize", "100");
+  ndnHelper.SetContentStore ("ns3::ndn::cs::Lru", "MaxSize", "50");
   //ndnHelper.SetContentStore ("ns3::ndn::cs::Nocache");
   ndnHelper.SetDefaultRoutes (true);
   ndnHelper.Install(nodes);
@@ -149,6 +149,7 @@ main (int argc, char *argv[])
   ndn::AppHelper consumerHelper ("ns3::ndn::ConsumerCbr");
   consumerHelper.SetPrefix (prefix);
   consumerHelper.SetAttribute ("Frequency", DoubleValue (10.0));
+  consumerHelper.SetAttribute ("MaxSeq", DoubleValue (50));
   consumerHelper.Install (nodes.Get (2));
   consumerHelper.Install (nodes.Get (3));
   consumerHelper.Install (nodes.Get (6));
