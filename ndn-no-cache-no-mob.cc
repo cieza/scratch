@@ -134,7 +134,7 @@ main (int argc, char *argv[])
   NS_LOG_INFO ("Installing NDN stack");
   ndn::StackHelper ndnHelper;
   ndnHelper.SetForwardingStrategy ("ns3::ndn::fw::BestRoute");
-  //ndnHelper.SetContentStore ("ns3::ndn::cs::Lru", "MaxSize", "100");
+  //ndnHelper.SetContentStore ("ns3::ndn::cs::Lru", "MaxSize", "50");
   ndnHelper.SetContentStore ("ns3::ndn::cs::Nocache");
   ndnHelper.SetDefaultRoutes (true);
   ndnHelper.Install(nodes);
@@ -146,40 +146,15 @@ main (int argc, char *argv[])
 
   // Consumer will request /prefix/0, /prefix/1, ...
 
-  /*ndn::AppHelper consumerHelper ("ns3::ndn::ConsumerCbr");
+  ndn::AppHelper consumerHelper ("ns3::ndn::ConsumerCbr");
   consumerHelper.SetPrefix (prefix);
   consumerHelper.SetAttribute ("Frequency", DoubleValue (10.0));
+  consumerHelper.SetAttribute ("MaxSeq", DoubleValue (50));
   consumerHelper.Install (nodes.Get (2));
   consumerHelper.Install (nodes.Get (3));
   consumerHelper.Install (nodes.Get (6));
   consumerHelper.Install (nodes.Get (9));
-  consumerHelper.Install (nodes.Get (12));*/
-    
-    ndn::AppHelper consumerHelper1 ("ns3::ndn::ConsumerCbr");
-    consumerHelper1.SetPrefix ("/prefix/2");
-    consumerHelper1.SetAttribute ("Frequency", DoubleValue (10.0));
-    consumerHelper1.Install (nodes.Get (2));
-    
-    ndn::AppHelper consumerHelper2 ("ns3::ndn::ConsumerCbr");
-    consumerHelper2.SetPrefix ("/prefix/3");
-    consumerHelper2.SetAttribute ("Frequency", DoubleValue (10.0));
-    consumerHelper2.Install (nodes.Get (3));
-    
-    ndn::AppHelper consumerHelper3 ("ns3::ndn::ConsumerCbr");
-    consumerHelper3.SetPrefix ("/prefix/6");
-    consumerHelper3.SetAttribute ("Frequency", DoubleValue (10.0));
-    consumerHelper3.Install (nodes.Get (6));
-    
-    ndn::AppHelper consumerHelper4 ("ns3::ndn::ConsumerCbr");
-    consumerHelper4.SetPrefix ("/prefix/9");
-    consumerHelper4.SetAttribute ("Frequency", DoubleValue (10.0));
-    consumerHelper4.Install (nodes.Get (9));
-    
-    ndn::AppHelper consumerHelper5 ("ns3::ndn::ConsumerCbr");
-    consumerHelper5.SetPrefix ("/prefix/12");
-    consumerHelper5.SetAttribute ("Frequency", DoubleValue (10.0));
-    consumerHelper5.Install (nodes.Get (12));
-
+  consumerHelper.Install (nodes.Get (12));
 
   // Producer will reply to all requests starting with /prefix
 
