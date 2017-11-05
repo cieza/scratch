@@ -1,17 +1,17 @@
 #!/usr/bin/perl
 
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_1";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_1";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_1";
-$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_1";
+#$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_1";
+#$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_1";
+#$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_1";
+$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_1";
 
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_2";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_2";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_2";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_2";
+#$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_2";
+#$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_2";
+#$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_2";
+#$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_2";
 
 
-# $arquivo_final= "/Users/Elise/Desktop/arquivo-final.dat";
+# $arquivo_final= "/home/azeic/arquivo-final.dat";
 
 
 
@@ -41,17 +41,14 @@ foreach $dir_exp(@lista)
         foreach(<ARK>)
         {
             @linha = split(/\s+/);
-            #print("linha: $linha[4] \n");
             #verifica na coluna 4 (Type) do ARK se encontra alvo
             if($linha[4] eq "InSatisfiedInterests")
             {
-                #print("Entrou\n");
                 $packets = $packets + $linha[5];
                 $packet_raw = $packet_raw + $linha[7];
             }
             if($linha[4] eq "OutInterests")
             {
-                #print("Entrou\n");
                 $out_packets = $out_packets + $linha[5];
                 $out_packet_raw = $out_packet_raw + $linha[7];
             }
