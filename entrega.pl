@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
-#$diretorio = "/Users/Elise/Desktop/graficos/resultados";
+#$diretorio = "/Users/azeic/graficos/resultados";
 
-$diretorio = "/home/elise/ndnSIM/ns-3/resultados";
+$diretorio = "/home/azeic/ndnSIM/ns-3/resultados";
 
 
 $n = $ARGV[0];
@@ -74,13 +74,11 @@ foreach $dir_scenario(@lista)
                             #verifica na coluna 4 (Type) do ARK se encontra alvo
                             if($linha[4] eq "InInterests")
                             {
-                                #print("Entrou\n");
                                 #$packets = $packets + $linha[5];
                                 $ininterest_packet_raw = $ininterest_packet_raw + $linha[7];
                             }
                             if($linha[4] eq "InSatisfiedInterests")
                             {
-                                #print("Entrou\n");
                                 #$out_packets = $out_packets + $linha[5];
                                 $insatisfiedinterest_packet_raw = $insatisfiedinterest_packet_raw + $linha[7];
                             }
@@ -115,8 +113,8 @@ foreach $dir_scenario(@lista)
     
 }
 
-$file_name = "/home/elise/ndnSIM/ns-3/txentrega.txt";
-#$file_name = "/Users/Elise/Desktop/graficos/txentrega.txt";
+$file_name = "/home/azeic/ndnSIM/ns-3/txentrega.txt";
+#$file_name = "/Users/azeic/graficos/txentrega.txt";
 open ARK, ">".$file_name;
 select ARK;
 $i = 0;
