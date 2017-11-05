@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-#$diretorio = "/Users/azeic/graficos/resultados";
+#$diretorio = "/home/azeic/graficos/resultados";
 
 $diretorio = "/home/azeic/ndnSIM/ns-3/resultados";
 
@@ -114,7 +114,7 @@ foreach $dir_scenario(@lista)
 }
 
 $file_name = "/home/azeic/ndnSIM/ns-3/txentrega.txt";
-#$file_name = "/Users/azeic/graficos/txentrega.txt";
+#$file_name = "/home/azeic/graficos/txentrega.txt";
 open ARK, ">".$file_name;
 select ARK;
 $i = 0;
