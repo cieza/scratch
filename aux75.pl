@@ -1,14 +1,6 @@
 #!/usr/bin/perl
 
-$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_3";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_3";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_3";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_3";
-
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_4";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob-pollution/experimento_4";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob/experimento_4";
-#$diretorio = "/home/elise/ndnSIM/ns-3/resultados/ndn-with-cache-no-mob-pollution/experimento_4";
+$diretorio = "/home/azeic/ndnSIM/ns-3/resultados/ndn-no-cache-no-mob/experimento_3";
 
 #########################
 opendir(diretorio, $diretorio);
@@ -73,5 +65,5 @@ $valor_1 = $y/$b;
 print("Y/B: $valor_1 \n");
 
 print("\ncount: $count\n");
-print("Número de out: ".( $sum_out_packets)." \n");
-print("Número de receive: ". ($sum_receive_data)." \n");
+print("NÃºmero de out: ".( $sum_out_packets)." \n");
+print("NÃºmero de receive: ". ($sum_receive_data)." \n");
